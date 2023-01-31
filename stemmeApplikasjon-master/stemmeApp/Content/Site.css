@@ -1,0 +1,156 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+
+/* Bootstrap 5*/
+
+.b5container,
+.b5container-fluid,
+.b5container-xxl,
+.b5container-xl,
+.b5container-lg,
+.b5container-md,
+.b5container-sm {
+    width: 100%;
+    padding-right: var(--bs-gutter-x, 0.b575rem);
+    padding-left: var(--bs-gutter-x, 0.b575rem);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.b5col {
+    flex: 1 0 0%;
+}
+
+.b5row {
+    --bs-gutter-x: 1.b55rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(var(--bs-gutter-y) * -1);
+    margin-right: calc(var(--bs-gutter-x) / -2);
+    margin-left: calc(var(--bs-gutter-x) / -2);
+}
+
+    .b5row > * {
+        flex-shrink: 0;
+        width: 100%;
+        max-width: 100%;
+        padding-right: calc(var(--bs-gutter-x) / 2);
+        padding-left: calc(var(--bs-gutter-x) / 2);
+        margin-top: var(--bs-gutter-y);
+    }
+
+
+/* Kode skrevet av Haris Brkic, sist endret 01.06.2021 */
+.b5card {
+    align-items: center;
+    position: relative;
+    display: inline-block;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 25px;
+
+}
+
+.b5mt-1 {
+    margin-top: 0.25rem !important;
+}
+
+.b5mt-2 {
+    margin-top: 0.5rem !important;
+}
+
+.b5mt-3 {
+    margin-top: 1rem !important;
+}
+
+.b5mt-4 {
+    margin-top: 1.5rem !important;
+}
+
+.b5mt-5 {
+    margin-top: 3rem !important;
+}
+
+.b5border-top {
+    border-top: 3px solid black !important;
+}
+
+p.card-info {
+    text-align: center;
+    height: 110px;
+    overflow: auto;
+    letter-spacing: 1px;
+    margin-top: 0.1rem !important;
+    margin-right: 0.1rem !important;
+    margin-left: 1rem !important;
+    margin-bottom: 2rem !important;
+}
+/* Kode skrevet av Haris Brkic, sist endret 01.06.2021 */
+p.card-info {
+    text-align: center;
+    height: 110px;
+    overflow: auto;
+    letter-spacing: 1px;
+    margin-top: 0.1rem !important;
+    margin-right: 0.1rem !important;
+    margin-left: 1rem !important;
+    margin-bottom: 2rem !important;
+}
+
+.p-card-style {
+    width: 40rem;
+    border-radius: 5px;
+    margin-left: 6rem !important;
+    margin-top: 2rem !important;
+    margin-right: 2rem !important;
+    margin-bottom: 2rem !important;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.p-card-img-style {
+    width: 400px;
+    height: 250px;
+    object-fit: fill;
+    border-radius: 3px;
+}
+
+@media only screen and (max-width: 400px) {
+    .p-card-style {
+        width: 30rem;
+        margin-left: 2rem !important;
+    }
+
+    .p-card-img-style {
+        width: 100%;
+        height: 100%;
+    }
+}
+

@@ -1,0 +1,34 @@
+﻿@model List<stemmeApp.Models.CandidateVotes>
+
+@{
+    ViewBag.Title = "Candidates";
+}
+<!-- SKREVET AV ALEKSANDER NILSSON : Sist endret 04.06.2021 -->
+
+<a href="Index" class="btn btn-primary" style="margin-top:30px">Go back</a>
+<h2>Candidates</h2>
+<h4>This list is sorted by the amount of votes a candidate has, meaning the winner of the election is on top.</h4>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <td><b>Candidate Username</b></td>
+            <td><b>Firstname</b></td>
+            <td><b>Lastname</b></td>
+            <td><b>Total votes</b></td>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Username</td>
+                <td>@item.Firstname</td>
+                <td>@item.Lastname</td>
+                <td>@item.Votes</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+

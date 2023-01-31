@@ -1,0 +1,28 @@
+﻿@model stemmeApp.Models.InspectorViewModel
+
+@{
+    ViewBag.Title = "Votes";
+}
+<!-- SKREVET AV ALEKSANDER NILSSON : Sist endret 04.06.2021 -->
+
+<a href="Index" class="btn btn-primary" style="margin-top:30px">Go back</button></a>
+<h2>Votes</h2>
+<h4>This list shows all the individual votes in the election</h4>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <td>Voter</td>
+            <td>Voted On</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Votes)
+        {
+            <tr>
+                <td>@item.Voter</td>
+                <td>@item.VotedOn</td>
+            </tr>
+        }
+    </tbody>
+</table>
+

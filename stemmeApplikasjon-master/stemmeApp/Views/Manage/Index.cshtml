@@ -1,0 +1,50 @@
+﻿@model stemmeApp.Models.IndexViewModel
+@using Microsoft.AspNet.Identity
+@{
+    ViewBag.Title = "Manage";
+
+}
+<br />
+<h2>@ViewBag.Title</h2>
+
+@if (TempData["EditUserSuccess"] != null)
+{
+    <div class="alert alert-dismissible alert-success">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong> @TempData["EditUserSuccess"]</strong>
+    </div>
+}
+<div>
+    <h4>Change your account settings</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>Password:</dt>
+        <dd>
+            [
+            @if (Model.HasPassword)
+            {
+                @Html.ActionLink("Change your password", "ChangePassword")
+            }
+            else
+            {
+                @Html.ActionLink("Create", "SetPassword")
+            }
+            ]
+        </dd>
+        @if (Model.IsCandidate)
+        {
+            <dt>Candidate:</dt>
+            <dd>
+                [@Html.ActionLink("Change relevant candidate information about yourself", "ChangeCandidateInfo")]
+            </dd>
+            <dd>
+                <form method="post" action="@Url.Action("RemoveCandidate", "Manage")">
+                    <input type="text" name="name" value="@User.Identity.GetUserName()" hidden />
+                    <input class="btn btn-warning" name="submit" type="submit" value="Withdraw as candidate" onclick="return confirm('Are you sure you want to remove yourself as candidate?')" />
+                </form>
+            </dd>
+
+        }
+
+    </dl>
+</div>
